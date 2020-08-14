@@ -8,21 +8,21 @@ import './App.scss';
 
 class App extends React.Component {
   state = {
-    students: [],
+    liveStudents: [],
   }
 
   componentDidMount() {
-    const students = studentsData.livingStudents();
-    this.setState({ students });
+    const liveStudents = studentsData.livingStudents();
+    this.setState({ liveStudents });
   }
 
   render() {
-    const { students } = this.state;
+    const { liveStudents } = this.state;
     return (
       <div className="App">
         <h2>INSIDE APP COMPONENT</h2>
         <button className="btn btn-info">I am a button</button>
-        <LiveStudent students={students}/>
+        <LiveStudent liveStudents={liveStudents}/>
       </div>
     );
   }
