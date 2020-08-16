@@ -1,6 +1,6 @@
 import React from 'react';
-
-import LiveStudent from '../components/LiveStudent/LiveStudent';
+import PropType from 'prop-types';
+// import LiveStudent from '../components/LiveStudent/LiveStudent';
 
 import studentsData from '../helpers/data/studentsData';
 
@@ -11,22 +11,61 @@ import Graveyards from '../components/Graveyard/Graveyard';
 class App extends React.Component {
   state = {
     liveStudents: [],
+    message: PropType.string,
   }
 
   componentDidMount() {
     const liveStudents = studentsData.livingStudents();
     this.setState({ liveStudents });
+    // eslint-disable-next-line prefer-const
+    const message = '';
+    this.setState({ message });
+  }
+
+  sharkAttack = (id) => {
+    studentsData.followTheLight(id);
+    const liveStudents = studentsData.livingStudents();
+    this.setState({ liveStudents });
+  }
+
+  updateMessage = (m) => {
+    const message = m;
+    this.setState({ message });
+  }
+
+  sharkAttackEvent = (e) => {
+    e.preventDefault();
+    const { liveStudents } = this.state;
+    let message = '';
+    if (liveStudents.length === 0) {
+      message = 'There is no more students to eat';
+      this.updateMessage(message);
+    } else {
+      const max = Math.floor(liveStudents.length - 1);
+      const min = 1;
+      // const getRandom = Math.ceil(Math.random(1));
+      const randomNum = Math.floor(Math.random() * (max - min) + min);
+      // console.warn('return student id getrandom ', getRandom);
+      // console.warn('return student id randomNum ', randomNum);
+      const getme = liveStudents[randomNum].id;
+      // console.warn('return student id getme ', getme);
+      // console.warn('return student id getrandom ', getRandom);
+      this.sharkAttack(getme);
+      console.warn('got excute');
+      message = '';
+      this.updateMessage(message);
+    }
   }
 
   render() {
-    const { liveStudents } = this.state;
+    const { liveStudents, message } = this.state;
     return (
       <div className="App">
-        <h2>INSIDE APP COMPONENT</h2>
-        <h1>Headers</h1>
-        <button className="btn btn-info">SharkTank</button>
-        <SharkTank />
-        <LiveStudent liveStudents={liveStudents}/>
+        <h1 className="app_h2">Shark Attack</h1>
+        <img src="https://cdn.wallpapersafari.com/77/36/efHpVU.jpg" alt="back" />
+        <i class="fas fa-icicles shapFont"><button className="centered btn" onClick={this.sharkAttackEvent}>Feed The Shark</button></i>
+        <h4 className="app_message">{ message }</h4>
+        <SharkTank liveStudents={liveStudents} sharkAttack={this.sharkAttack}/>
         <Graveyards />
       </div>
     );
@@ -34,6 +73,9 @@ class App extends React.Component {
 }
 
 export default App;
+
+// pattern for the title
+// https://media.seamwork.com/2019/01/04-ice-dyeing.jpg
 
 // some background links:
 
@@ -52,5 +94,8 @@ https://cdn.wallpapersafari.com/77/36/efHpVU.jpg
 https://thumbs.gfycat.com/AgonizingDecisiveBullmastiff-size_restricted.gif
 good for grave
 https://slm-assets.secondlife.com/assets/16144863/original/gif_underwater.gif?1485169880
+
+This is for home icon or whatever
+https://www.vhv.rs/dpng/d/555-5557767_shark-animated-cartoon-clip-art-animated-shark-png.png
 
 */

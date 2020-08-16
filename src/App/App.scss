@@ -2,6 +2,50 @@
   text-align: center;
 }
 
+body {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('https://www.desktopbackground.org/download/1920x1080/2012/03/19/361043_backgrounds-blue-brick-wallpapers-b55-wallpaperity-com_2880x1800_h.jpg');
+}
+
+body img {
+  object-fit: contain;
+}
+
+.container {
+  position: absolute;
+  top: 190px;
+}
+
+.shapFont {
+  position: absolute;
+  font-size: 180px;
+  top: 20px;
+  left: 290px;
+}
+
+.app_message {
+  position: absolute;
+  font-size: 180px;
+  top: 20px;
+}
+
+.centered {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRRCcb9anIQI8ye2fMKL9Ux9lbpi8hvz4gUvBW573RIsB7Q7D&s');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: antiquewhite;
+}
+
+.centered:hover {
+  color: rgb(253, 0, 0);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +79,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app_h2 {
+  color: rgb(179, 13, 13);
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  font-weight: bolder;
+  background-image: url('https://img2.fonwall.ru/o/yp/backgrounds-ocean-textures-tiles.jpeg');
+}
+/* background-color: rgb(0, 97, 189); */
+
+.header_div {
+  justify-content: center;
+  text-align: center;
+  position: sticky;
 }
