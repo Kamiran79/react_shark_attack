@@ -38,7 +38,7 @@ class App extends React.Component {
     const { liveStudents } = this.state;
     let message = '';
     if (liveStudents.length === 0) {
-      message = 'There is no more students to eat';
+      message = 'There is no more students to feed';
       this.updateMessage(message);
     } else {
       const max = Math.floor(liveStudents.length - 1);
@@ -62,7 +62,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="app_h2">Shark Attack</h1>
-        <img src="https://cdn.wallpapersafari.com/77/36/efHpVU.jpg" alt="back" />
+        <span className="app_logo"><p className="app_logo1">. .</p></span>
+        {/* <img src="https://thumbs.gfycat.com/AgonizingDecisiveBullmastiff-size_restricted.gif" alt="back" /> */}
         <i class="fas fa-icicles shapFont"><button className="centered btn" onClick={this.sharkAttackEvent}>Feed The Shark</button></i>
         <h4 className="app_message">{ message }</h4>
         <SharkTank liveStudents={liveStudents} sharkAttack={this.sharkAttack}/>
