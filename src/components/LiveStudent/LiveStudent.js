@@ -19,6 +19,7 @@ class LiveStudent extends React.Component {
 
   render() {
     const { liveStudent } = this.props;
+    /*
     const randomNum = Math.floor(Math.random() * Math.floor(20));
     const randomImg = [
       'https://lh5.googleusercontent.com/proxy/1Mz08TPyLE8G4_fophxDLkwxbcuSSEol5Vzr77KdXgHX7vRp36eaHk48O0ZUbCSq5xBYFpbrd6Gj9GHRwIsWmjhJhICRaCPS5ugOCbYGvfc6wbrPvsEjmlikphwBq1oLWw',
@@ -26,9 +27,16 @@ class LiveStudent extends React.Component {
       'https://media0.giphy.com/media/41fVADWFuH310BFLvt/giphy.gif',
       'https://www.artiestick.com/summer/arg-shark-surfboard-bg-207x165-url.gif',
       // eslint-disable-next-line max-len
-      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5693b494-a609-44cb-95fd-36676632d1ee/daubuiq-e0acbdf6-76b4-4552-805b-51fc0abf9311.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNTY5M2I0OTQtYTYwOS00NGNiLTk1ZmQtMzY2NzY2MzJkMWVlXC9kYXVidWlxLWUwYWNiZGY2LTc2YjQtNDU1Mi04MDViLTUxZmMwYWJmOTMxMS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.hJsDQw6OBaQsmpOWpOkqRY86DTjrxq7yALcXZTZJMg4',
+      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5693b494-a609-44cb-95fd-36676632d1ee/daubuiq-e0acbdf6-76b4-4552-805b-51fc0abf9311.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+      .eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNTY5M2I0OTQtYTYwOS00NGNiLTk1ZmQtMzY2NzY2MzJkMWVlXC9kYXVidWlxLWUwYWNiZGY2LTc2YjQtNDU1Mi04MDViLTUxZmMwYWJmOTMxMS
+      5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ
+      .hJsDQw6OBaQsmpOWpOkqRY86DTjrxq7yALcXZTZJMg4',
       // eslint-disable-next-line max-len
-      'https://images.squarespace-cdn.com/content/v1/544ff970e4b0c2f7a273e9b6/1500276703791-A60MZGD8RY01NFUZHXWX/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI6FXy8c9PWtBlqAVlUS5izpdcIXDZqDYvprRqZ29Pw0o/Floating_v2.gif',
+      'https://images.squarespace-cdn.com/content/v1/544ff970e4b0c2f7a273e9b6/1500276703791-A60MZGD8RY01NFUZHXWX
+      /ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw
+      -zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s
+      _4yszcp2ryTI0HqTOaaUohrI8PI6FXy8c9PWtBlqAVlUS5izpdcIXDZqDYvprRqZ29Pw0o
+      /Floating_v2.gif',
       'https://www.artiestick.com/summer/arg-kid-in-pool-w-shark-bg-207x165-url.gif',
       'https://64.media.tumblr.com/50fa6b8c2619ae3e57a15cebbbd89c7f/tumblr_ntysrzcoFe1sjwwzso1_500.gif',
       'https://i.gifer.com/5zRi.gif',
@@ -44,14 +52,11 @@ class LiveStudent extends React.Component {
       'https://i.kinja-img.com/gawker-media/image/upload/t_original/z0te37ocxchjfkb1tzkl.gif',
       'https://tgr.scdn2.secure.raxcdn.com/images/wysiwyg/_article/7afnlf8fabpx.gif',
     ];
-
+    */
     return (
       <div className="card m-1 liveStudent">
-        <img className="card-img-top" src={ liveStudent.imgUrl } alt="shark" />
-        <div className="card-body">
-          <h5 className="card-title">{ liveStudent.firstName } { liveStudent.lastName}</h5>
-          <p className="card-text">Still Live : <i className="far fa-smile"></i></p>
-        </div>
+        <p className="card-text">Still Live : <i className="far fa-smile"></i></p>
+        <h5 className="card-title">{ liveStudent.firstName } { liveStudent.lastName}</h5>
       </div>
     );
   }

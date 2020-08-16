@@ -5,7 +5,10 @@
 body {
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url('https://www.desktopbackground.org/download/1920x1080/2012/03/19/361043_backgrounds-blue-brick-wallpapers-b55-wallpaperity-com_2880x1800_h.jpg');
+  background-image: url('https://thumbs.gfycat.com/AgonizingDecisiveBullmastiff-size_restricted.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 1000%;
+  background-position: center;
 }
 
 body img {
@@ -44,6 +47,23 @@ body img {
 
 .centered:hover {
   color: rgb(253, 0, 0);
+}
+
+/*
+.app_logo {
+  position: absolute;
+  font-size: 180px;
+  top: -90px;
+  left: 20px;
+  background-image: url('https://www.netclipart.com/pp/m/37-371057_baby-shark-clipart-mama-baby-shark-png.png');
+  background-repeat: no-repeat;
+  background-size: 50% 25%;
+  background-position: center;
+  border-radius: 30%;
+}
+*/
+.app_logo1 {
+  opacity: 0;
 }
 
 .App-logo {
