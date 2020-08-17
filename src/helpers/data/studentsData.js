@@ -157,11 +157,15 @@ const followTheLight = (id) => {
   students[objIndex].isDead = true;
 };
 
-const getStudents = () => students;
+const putAllStudentsLive = () => {
+  students.forEach((response) => { // eslint wants this to be 'response'
+    response.isDead = false;
+  });
+};
 
 export default {
   livingStudents,
   dearlyBeloved,
   followTheLight,
-  getStudents,
+  putAllStudentsLive,
 };
