@@ -22,7 +22,7 @@ class SharkTank extends React.Component {
         <div className="container">
           <h2>Shark Tank</h2>
           <h6>Food Left: { liveStudentCard.length }</h6>
-            <div className="row col-md-9 d-flex flex-wrap">
+            <div className="row d-flex flex-wrap">
               { liveStudentCard }
             </div>
         </div>
