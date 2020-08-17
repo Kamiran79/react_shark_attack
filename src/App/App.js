@@ -17,21 +17,16 @@ class App extends React.Component {
 
   componentDidMount() {
     const liveStudents = studentsData.livingStudents();
-    this.setState({ liveStudents });
-    // get Dead Students
     const dearlyBeloved = studentsData.dearlyBeloved();
-    this.setState({ dearlyBeloved });
-    // eslint-disable-next-line prefer-const
     const message = '';
-    this.setState({ message });
+    this.setState({ liveStudents, dearlyBeloved, message });
   }
 
   sharkAttack = (id) => {
     studentsData.followTheLight(id);
     const liveStudents = studentsData.livingStudents();
-    this.setState({ liveStudents });
     const dearlyBeloved = studentsData.dearlyBeloved();
-    this.setState({ dearlyBeloved });
+    this.setState({ liveStudents, dearlyBeloved });
   }
 
   updateMessage = (m) => {
